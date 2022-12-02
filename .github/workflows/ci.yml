@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - run: yarn install
+      - run: yarn --prefer-offline
       - run: yarn run lint
       - run: yarn run build
 
@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - run: yarn install
+      - run: yarn --prefer-offline
       - run: yarn run test
 
   test-e2e:
@@ -49,5 +49,5 @@ jobs:
         with:
           node-version: 16.x
           cache: yarn
-      - run: yarn install
+      - run: yarn --prefer-offline
       - run: yarn run test:e2e
